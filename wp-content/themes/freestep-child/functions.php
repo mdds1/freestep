@@ -15,6 +15,20 @@ function freestep_asset_version($relativo)
     return file_exists($caminho) ? (string) filemtime($caminho) : '1.0.0';
 }
 
+/**
+ * Recorte quadrado proprio para o card do membro.
+ *
+ * O tamanho 'medium' do WordPress preserva a proporcao, entao uma foto em
+ * retrato saia com 200px de largura num card de quase 300px e esticava. Com
+ * recorte fixo de 600px a imagem ja chega quadrada, sem upscale.
+ *
+ * Ancorado no topo porque a maioria das fotos e retrato: cortar pelo centro
+ * come a cabeca. Em foto deitada o recorte e horizontal e isso nao pesa.
+ */
+add_action('after_setup_theme', function () {
+    add_image_size('freestep-membro', 600, 600, ['center', 'top']);
+});
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('child-style', get_stylesheet_uri(), ['parent-style'], freestep_asset_version('/style.css'));

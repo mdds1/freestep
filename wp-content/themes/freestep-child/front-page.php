@@ -63,7 +63,7 @@
       <article class="fs-membro-card">
         <a class="fs-membro-card__foto" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true">
           <?php if (has_post_thumbnail()): ?>
-            <?php the_post_thumbnail('medium', ['alt' => '']); ?>
+            <?php the_post_thumbnail('freestep-membro', ['alt' => '']); ?>
           <?php else: ?>
             <span class="fs-membro-card__inicial"><?php echo esc_html(mb_substr(get_the_title(), 0, 1)); ?></span>
           <?php endif; ?>
