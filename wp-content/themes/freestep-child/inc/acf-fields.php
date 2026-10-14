@@ -47,6 +47,12 @@ add_action('acf/init', function () {
                 'type'  => 'url',
             ],
             [
+                'key'   => 'field_membro_facebook',
+                'label' => 'Facebook',
+                'name'  => 'membro_facebook',
+                'type'  => 'url',
+            ],
+            [
                 'key'   => 'field_membro_youtube',
                 'label' => 'YouTube',
                 'name'  => 'membro_youtube',

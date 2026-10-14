@@ -13,6 +13,11 @@ Version: 1.0.0
   --color-branco: #ffffff;
   --font-titulo: 'Barlow Condensed', sans-serif;
   --font-corpo: 'Inter', sans-serif;
+
+  /* Fonte unica da altura do header. O header fixo e o padding que o
+     compensa no topo do body saem daqui; manter os dois amarrados a uma
+     variavel so evita a faixa de sobra entre o header e o hero. */
+  --header-h: 84px;
 }
 
 body {
@@ -20,6 +25,7 @@ body {
   color: var(--color-texto);
   background: var(--color-bg);
   margin: 0;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4 {

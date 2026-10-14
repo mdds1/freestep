@@ -9,9 +9,30 @@
    body{padding-top:0px;...} em global-styles-inline-css DEPOIS
    deste arquivo, e com especificidade igual o ultimo vence. */
 html body {
-  padding-top: 80px;
+  padding-top: var(--header-h);
   background-color: var(--color-bg);
   color: var(--color-texto);
+}
+
+/* Logado, o WordPress desenha a barra de admin de 32px fixa no topo. O
+   header precisa descer e o padding do body acompanhar, senao a logo fica
+   cortada em cima e sobra uma faixa vazia embaixo do header. */
+html body.admin-bar {
+  padding-top: calc(var(--header-h) + 32px);
+}
+
+body.admin-bar .fs-header {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  html body.admin-bar {
+    padding-top: calc(var(--header-h) + 46px);
+  }
+
+  body.admin-bar .fs-header {
+    top: 46px;
+  }
 }
 
 /* GeneratePress limita largura de imagem no conteudo */
@@ -21,7 +42,13 @@ html body {
 }
 
 .fs-section {
-  padding: 5rem 1.5rem;
+  padding: 7rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .fs-section {
+    padding: 4rem 1.25rem;
+  }
 }
 
 .fs-section--alt {
@@ -30,9 +57,10 @@ html body {
 
 .fs-section__title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
   color: var(--color-verde);
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem;
 }
 
 .fs-container {

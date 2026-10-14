@@ -58,19 +58,26 @@
         $membros->the_post();
         $funcao = get_field('membro_funcao');
       ?>
-      <a href="<?php the_permalink(); ?>" class="fs-membro-card">
-        <?php if (has_post_thumbnail()): ?>
-          <div class="fs-membro-card__foto">
-            <?php the_post_thumbnail('medium', ['alt' => get_the_title()]); ?>
-          </div>
-        <?php endif; ?>
+      <?php // article, e nao <a> envolvendo tudo: os botoes de rede sao
+            // links, e link dentro de link e HTML invalido. ?>
+      <article class="fs-membro-card">
+        <a class="fs-membro-card__foto" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true">
+          <?php if (has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('medium', ['alt' => '']); ?>
+          <?php else: ?>
+            <span class="fs-membro-card__inicial"><?php echo esc_html(mb_substr(get_the_title(), 0, 1)); ?></span>
+          <?php endif; ?>
+        </a>
         <div class="fs-membro-card__info">
-          <h3 class="fs-membro-card__nome"><?php the_title(); ?></h3>
+          <h3 class="fs-membro-card__nome">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </h3>
           <?php if ($funcao): ?>
             <p class="fs-membro-card__funcao"><?php echo esc_html($funcao); ?></p>
           <?php endif; ?>
+          <?php freestep_redes_do_membro(get_the_ID(), 'fs-social fs-membro-card__social'); ?>
         </div>
-      </a>
+      </article>
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </div>

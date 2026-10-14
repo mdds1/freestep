@@ -1,40 +1,74 @@
 .fs-time__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 2.5rem 2rem;
+  margin-top: 3rem;
 }
 
 .fs-membro-card {
-  text-decoration: none;
-  color: inherit;
   background: var(--color-bg);
   border-bottom: 3px solid transparent;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .fs-membro-card:hover {
   border-color: var(--color-dourado);
   transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.fs-membro-card__foto {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--color-verde);
 }
 
 .fs-membro-card__foto img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
+/* Sem foto destacada o card viraria um buraco branco. A inicial do nome
+   segura o layout ate a equipe subir as fotos. */
+.fs-membro-card__inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-titulo);
+  font-size: 4rem;
+  color: var(--color-dourado);
+}
+
 .fs-membro-card__info {
-  padding: 1rem 0.5rem;
+  padding: 1.25rem 0.5rem 1.5rem;
   text-align: center;
+}
+
+.fs-membro-card__social {
+  justify-content: center;
+  margin-top: 1.1rem;
 }
 
 .fs-membro-card__nome {
   font-family: var(--font-titulo);
-  font-size: 1.1rem;
-  color: var(--color-verde);
+  font-size: 1.25rem;
   margin: 0 0 0.25rem;
+}
+
+.fs-membro-card__nome a {
+  color: var(--color-verde);
+  text-decoration: none;
+}
+
+.fs-membro-card__nome a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-dourado);
+  text-underline-offset: 4px;
 }
 
 .fs-membro-card__funcao {
@@ -77,16 +111,8 @@
   margin-bottom: 2rem;
 }
 
-.fs-membro-single__social a {
-  display: inline-block;
-  margin-right: 1rem;
-  font-family: var(--font-titulo);
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--color-verde);
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-dourado);
-  padding-bottom: 2px;
+.fs-membro-single__social {
+  margin-top: 0.5rem;
 }
 
 .fs-membro-single__voltar {

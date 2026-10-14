@@ -1,0 +1,61 @@
+/* Botoes de rede social. Usados no card do grid e na pagina do membro;
+   o tamanho muda pela variante, nao por sobrescrita espalhada. */
+
+.fs-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  --social-size: 40px;
+  --social-icon: 18px;
+}
+
+.fs-social--grande {
+  gap: 0.75rem;
+  --social-size: 48px;
+  --social-icon: 22px;
+}
+
+.fs-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--social-size);
+  height: var(--social-size);
+  border-radius: 50%;
+  background: var(--color-verde);
+  color: var(--color-branco);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.fs-social__link svg {
+  width: var(--social-icon);
+  height: var(--social-icon);
+  fill: currentColor;
+  display: block;
+}
+
+.fs-social__link:hover,
+.fs-social__link:focus-visible {
+  background: var(--color-dourado);
+  color: var(--color-texto);
+  transform: translateY(-2px);
+}
+
+.fs-social__link:focus-visible {
+  outline: 2px solid var(--color-texto);
+  outline-offset: 2px;
+}
+
+/* Sobre fundo escuro (hero, rodape) o verde some; inverte para contorno. */
+.fs-social--claro .fs-social__link {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-branco);
+}
+
+.fs-social--claro .fs-social__link:hover,
+.fs-social--claro .fs-social__link:focus-visible {
+  background: var(--color-dourado);
+  color: var(--color-texto);
+}
