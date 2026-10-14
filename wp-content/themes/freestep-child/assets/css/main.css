@@ -51,16 +51,56 @@ body.admin-bar .fs-header {
   }
 }
 
+/* Era cinza chapado. Lavagem suave nas cores da marca, que foi o retorno
+   do time: tudo cor solida demais. */
 .fs-section--alt {
-  background: var(--color-bg-alt);
+  background: var(--grad-lavagem);
 }
 
 .fs-section__title {
   text-align: center;
   font-size: clamp(2rem, 5vw, 2.75rem);
   line-height: 1.1;
-  color: var(--color-verde);
   margin: 0 0 0.25rem;
+  /* Degradê no proprio texto. O color serve de reserva para navegador que
+     nao aplica background-clip em texto. */
+  color: var(--color-verde);
+  background: linear-gradient(135deg, var(--verde-claro) 0%, var(--color-verde) 45%, var(--verde-escuro) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Secao que ainda nao tem conteudo. O time avisou que o material so vem
+   ano que vem, entao o vazio e o estado normal por um bom tempo e precisa
+   parecer proposital, nao quebrado. */
+.fs-vazio {
+  max-width: 520px;
+  margin: 2.5rem auto 0;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 1px dashed rgba(26, 107, 53, 0.3);
+  border-radius: 8px;
+  background: var(--grad-lavagem);
+}
+
+.fs-section--alt .fs-vazio {
+  background: var(--color-bg);
+}
+
+.fs-vazio__titulo {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--color-verde);
+  margin: 0 0 0.5rem;
+}
+
+.fs-vazio p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.75;
 }
 
 .fs-container {

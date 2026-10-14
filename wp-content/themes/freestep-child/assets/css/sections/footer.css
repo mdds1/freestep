@@ -1,8 +1,24 @@
 .fs-footer {
-  background: var(--color-verde);
+  position: relative;
+  background-color: var(--color-verde);
+  background-image:
+    radial-gradient(ellipse 60% 70% at 15% 0%, rgba(42, 155, 78, 0.5), transparent 70%),
+    var(--grad-verde);
   color: var(--color-branco);
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem;
+}
+
+/* Faixa dourada no topo, fechando a pagina com o mesmo recurso do header
+   e do hero. */
+.fs-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-dourado);
 }
 
 .fs-footer__inner {

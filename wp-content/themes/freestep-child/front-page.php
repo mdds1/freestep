@@ -92,7 +92,10 @@
     // Substituir pelo shortcode real apos criar galeria no painel:
     // echo do_shortcode('[envira-gallery id="SEU_ID"]');
     ?>
-    <p style="text-align:center; opacity:0.5;">Galeria em breve.</p>
+    <div class="fs-vazio">
+      <p class="fs-vazio__titulo">Galeria em producao</p>
+      <p>Estamos selecionando as melhores fotos e videos das apresentacoes. Em breve esta secao vai estar cheia.</p>
+    </div>
   </div>
 </section>
 
@@ -136,7 +139,11 @@
       </div>
       <?php endwhile; wp_reset_postdata();
       else : ?>
-        <p style="text-align:center; opacity:0.6;">Nenhum show agendado no momento.</p>
+        <div class="fs-vazio">
+          <p class="fs-vazio__titulo">Sem datas abertas no momento</p>
+          <p>A agenda de apresentacoes e divulgada aqui assim que confirmada. Para contratar o time para uma data, fale com a gente.</p>
+          <p style="margin-top:1.5rem;"><a href="#contato" class="btn-contratar">Contratar o Time</a></p>
+        </div>
       <?php endif; ?>
     </div>
   </div>
@@ -147,9 +154,15 @@
   <div class="fs-container">
     <h2 class="fs-section__title">Imprensa</h2>
     <div class="section-divider"></div>
+    <?php $aparicoes = new WP_Query(['post_type' => 'fs_imprensa', 'posts_per_page' => 12]); ?>
+    <?php if (!$aparicoes->have_posts()) : ?>
+      <div class="fs-vazio">
+        <p class="fs-vazio__titulo">Materias a caminho</p>
+        <p>O time ja passou por televisao e veiculos de imprensa no Brasil e fora. Estamos reunindo os links.</p>
+      </div>
+    <?php else : ?>
     <div class="fs-imprensa__grid">
       <?php
-      $aparicoes = new WP_Query(['post_type' => 'fs_imprensa', 'posts_per_page' => 12]);
       while ($aparicoes->have_posts()) : $aparicoes->the_post();
         $veiculo = get_field('imprensa_veiculo');
         $link    = get_field('imprensa_link');
@@ -165,6 +178,7 @@
       </a>
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
+    <?php endif; ?>
   </div>
 </section>
 
@@ -173,9 +187,16 @@
   <div class="fs-container">
     <h2 class="fs-section__title">Parceiros</h2>
     <div class="section-divider"></div>
+    <?php $parceiros = new WP_Query(['post_type' => 'fs_parceiro', 'posts_per_page' => -1]); ?>
+    <?php if (!$parceiros->have_posts()) : ?>
+      <div class="fs-vazio">
+        <p class="fs-vazio__titulo">Espaco para parceiros</p>
+        <p>Marcas interessadas em patrocinar ou fazer permuta com o time podem falar com a gente.</p>
+        <p style="margin-top:1.5rem;"><a href="#contato" class="btn-contratar">Quero ser parceiro</a></p>
+      </div>
+    <?php else : ?>
     <div class="fs-parceiros__grid">
       <?php
-      $parceiros = new WP_Query(['post_type' => 'fs_parceiro', 'posts_per_page' => -1]);
       while ($parceiros->have_posts()) : $parceiros->the_post();
         $link = get_field('parceiro_link');
       ?>
@@ -184,6 +205,7 @@
       </a>
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
+    <?php endif; ?>
   </div>
 </section>
 
@@ -199,7 +221,10 @@
     // Substituir pelo shortcode real apos criar formulario no WPForms:
     // echo do_shortcode('[wpforms id="SEU_ID"]');
     ?>
-    <p style="text-align:center; opacity:0.5;">Formulario em breve.</p>
+    <div class="fs-vazio">
+      <p class="fs-vazio__titulo">Fale com a gente</p>
+      <p>Escreva para <a href="mailto:timefreestepbrasil@gmail.com">timefreestepbrasil@gmail.com</a> com a data, o local e o tipo de evento.</p>
+    </div>
   </div>
 </section>
 

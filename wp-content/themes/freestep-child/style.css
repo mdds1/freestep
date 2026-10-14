@@ -14,6 +14,26 @@ Version: 1.0.0
   --font-titulo: 'Barlow Condensed', sans-serif;
   --font-corpo: 'Inter', sans-serif;
 
+  /* Tons derivados do verde e do dourado da marca. Servem para dar
+     profundidade sem inventar cor nova: o retorno do time foi que o site
+     estava chapado, so cor solida, e pedia degradê e tons mais suaves. */
+  --verde-escuro: #0e3d1e;
+  --verde-claro: #2a9b4e;
+  --dourado-claro: #ffd84d;
+  --dourado-escuro: #c99e00;
+
+  /* Lavagens bem claras para o fundo das secoes alternadas. */
+  --lavagem-verde: #f2f8f4;
+  --lavagem-dourado: #fdfaef;
+
+  --grad-verde: linear-gradient(135deg, var(--verde-claro) 0%, var(--color-verde) 55%, var(--verde-escuro) 100%);
+  --grad-dourado: linear-gradient(135deg, var(--dourado-claro) 0%, var(--color-dourado) 50%, var(--dourado-escuro) 100%);
+  --grad-escuro: linear-gradient(160deg, #15321f 0%, #0b1a11 55%, #070d09 100%);
+  --grad-lavagem: linear-gradient(135deg, var(--lavagem-verde) 0%, var(--lavagem-dourado) 100%);
+
+  --sombra-card: 0 2px 8px rgba(14, 61, 30, 0.06);
+  --sombra-card-hover: 0 14px 32px rgba(14, 61, 30, 0.16);
+
   /* Fonte unica da altura do header. O header fixo e o padding que o
      compensa no topo do body saem daqui; manter os dois amarrados a uma
      variavel so evita a faixa de sobra entre o header e o hero. */
@@ -35,28 +55,56 @@ h1, h2, h3, h4 {
 }
 
 .btn-contratar {
-  background: var(--color-verde);
+  position: relative;
+  /* z-index explicito cria contexto de empilhamento. Sem ele o ::after de
+     z-index -1 abaixo pinta atras do fundo do proprio botao e some. */
+  z-index: 0;
+  background: var(--grad-verde);
   color: var(--color-branco);
   font-family: var(--font-titulo);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.75rem 1.75rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 2rem;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(14, 61, 30, 0.28);
+  transition: box-shadow 0.25s, transform 0.25s, color 0.25s;
 }
 
-.btn-contratar:hover {
-  background: var(--color-dourado);
+/* O degradê do hover entra por cima em pseudo-elemento: nao da para
+   animar transicao entre dois linear-gradient direto na propriedade. */
+.btn-contratar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-dourado);
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: -1;
+}
+
+.btn-contratar:hover,
+.btn-contratar:focus-visible {
   color: var(--color-texto);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(201, 158, 0, 0.4);
+}
+
+.btn-contratar:hover::after,
+.btn-contratar:focus-visible::after {
+  opacity: 1;
 }
 
 .section-divider {
-  width: 60px;
-  height: 3px;
-  background: var(--color-dourado);
-  margin: 0.5rem auto 2rem;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--grad-dourado);
+  margin: 0.75rem auto 2rem;
 }

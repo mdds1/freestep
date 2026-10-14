@@ -19,17 +19,36 @@
 }
 
 .fs-numero {
+  position: relative;
   text-align: center;
-  border-left: 4px solid var(--color-dourado);
-  padding-left: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  background: var(--grad-lavagem);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+}
+
+/* A borda dourada solida virou faixa com degradê. */
+.fs-numero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: var(--grad-dourado);
 }
 
 .fs-numero__valor {
   display: block;
   font-family: var(--font-titulo);
   font-size: 3rem;
-  color: var(--color-verde);
   line-height: 1;
+  color: var(--color-verde);
+  background: var(--grad-verde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fs-numero__label {
