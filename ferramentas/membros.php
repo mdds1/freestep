@@ -16,6 +16,15 @@
  */
 
 /**
+ * Funcao de todo o time hoje. Quando alguem tiver funcao propria (diretor,
+ * produtor), vira uma chave 'funcao' por membro na lista abaixo.
+ *
+ * Com acento de proposito: e texto publicado, lido por imprensa e
+ * contratante. O arquivo e UTF-8 e o banco e utf8mb4.
+ */
+const FREESTEP_FUNCAO_PADRAO = 'Dançarino / Coreógrafo';
+
+/**
  * O time, na ordem do grid.
  *
  * 'handle' e o mesmo no Instagram e no TikTok para todos. Se algum dia um
@@ -43,7 +52,19 @@ $legados = [
     'alvesofc', 'edersonsouza', 'juxcst', 'takeshi', 'guhenrique', 'jorg._',
 ];
 
+// get_page_by_title compara sem diferenciar maiuscula, entao o legado
+// 'takeshi' casava com o membro real 'Takeshi' e o apagava a cada rodada,
+// levando junto a foto destacada e qualquer edicao feita pelo painel.
+$nomes_atuais = array_map(
+    static fn ($m) => mb_strtolower($m['nome']),
+    $membros
+);
+
 foreach ($legados as $titulo) {
+    if (in_array(mb_strtolower($titulo), $nomes_atuais, true)) {
+        continue;
+    }
+
     $antigo = get_page_by_title($titulo, OBJECT, 'fs_membro');
     if ($antigo) {
         wp_delete_post($antigo->ID, true);
@@ -82,6 +103,7 @@ foreach ($membros as $membro) {
 
     // rawurlencode nao serve aqui: ponto e underline (jorg._, jeff.tj) sao
     // validos em handle e escapar quebraria o link.
+    update_field('membro_funcao', FREESTEP_FUNCAO_PADRAO, $id);
     update_field('membro_instagram', "https://instagram.com/{$handle}", $id);
     update_field('membro_tiktok', "https://tiktok.com/@{$handle}", $id);
 }
