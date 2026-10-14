@@ -26,6 +26,16 @@
   margin: 0 auto;
 }
 
+/* Mesmo motivo do header: GeneratePress forca img{height:auto} e anula o
+   atributo height do HTML, inflando a logo. */
+.fs-footer__inner > img {
+  height: 64px;
+  width: auto;
+  max-width: 70vw;
+  margin: 0 auto;
+  display: block;
+}
+
 .fs-footer__social {
   margin: 1.5rem 0 1rem;
 }

@@ -20,20 +20,23 @@
     <div class="section-divider"></div>
     <div class="fs-sobre__grid">
       <div class="fs-sobre__texto">
-        <p>O Time Free Step Brasil e referencia nacional na danca Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Com apresentacoes em paises como Espanha e Peru, e aparicoes em programas de televisao como o SBT, o time une tecnica, criatividade e orgulho nacional.</p>
-        <p>Nossa missao e representar o melhor do Free Step brasileiro, inspirando novas geracoes e conectando culturas atraves da danca.</p>
+        <p>O Time Free Step Brasil e referencia nacional na danca Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Os integrantes ja se apresentaram em mais de 15 paises, competiram em campeonatos mundiais na Espanha e no Peru e passaram por emissoras como Globo, SBT, MTV, Record e Band.</p>
+        <p>No palco e nas redes, o time soma milhoes de seguidores e reune titulos nacionais e internacionais. Nossa missao e representar o melhor do Free Step brasileiro, inspirando novas geracoes e conectando culturas atraves da danca.</p>
       </div>
+      <?php // Numeros conferidos no material do time (midia kits e curriculos,
+            // maio de 2026). Nao alterar sem fonte: e pagina lida por
+            // contratante e imprensa. ?>
       <div class="fs-sobre__numeros">
         <div class="fs-numero">
-          <span class="fs-numero__valor">72K+</span>
-          <span class="fs-numero__label">Seguidores</span>
-        </div>
-        <div class="fs-numero">
-          <span class="fs-numero__valor">3+</span>
+          <span class="fs-numero__valor">15+</span>
           <span class="fs-numero__label">Paises</span>
         </div>
         <div class="fs-numero">
-          <span class="fs-numero__valor">SBT</span>
+          <span class="fs-numero__valor">72,6 MIL</span>
+          <span class="fs-numero__label">No Instagram do time</span>
+        </div>
+        <div class="fs-numero">
+          <span class="fs-numero__valor fs-numero__valor--texto">GLOBO &middot; SBT &middot; MTV</span>
           <span class="fs-numero__label">Na televisao</span>
         </div>
       </div>

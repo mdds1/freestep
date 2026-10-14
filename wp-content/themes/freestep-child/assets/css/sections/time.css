@@ -145,6 +145,14 @@
   margin-bottom: 2rem;
 }
 
+.fs-membro-single__bio p {
+  margin: 0 0 1.1rem;
+}
+
+.fs-membro-single__bio p:last-child {
+  margin-bottom: 0;
+}
+
 .fs-membro-single__social {
   margin-top: 0.5rem;
 }

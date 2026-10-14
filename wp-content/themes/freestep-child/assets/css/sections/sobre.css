@@ -42,13 +42,20 @@
 .fs-numero__valor {
   display: block;
   font-family: var(--font-titulo);
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
   color: var(--color-verde);
   background: var(--grad-verde);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Valor que e nome e nao numero (lista de emissoras) nao cabe no tamanho
+   dos numeros. */
+.fs-numero__valor--texto {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  line-height: 1.25;
 }
 
 .fs-numero__label {
