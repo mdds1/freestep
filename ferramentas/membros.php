@@ -16,29 +16,25 @@
  */
 
 /**
- * Funcao de todo o time hoje. Quando alguem tiver funcao propria (diretor,
- * produtor), vira uma chave 'funcao' por membro na lista abaixo.
- *
- * Com acento de proposito: e texto publicado, lido por imprensa e
- * contratante. O arquivo e UTF-8 e o banco e utf8mb4.
- */
-const FREESTEP_FUNCAO_PADRAO = 'Dançarino / Coreógrafo';
-
-/**
  * O time, na ordem do grid.
  *
  * 'handle' e o mesmo no Instagram e no TikTok para todos. Se algum dia um
  * membro divergir, o campo pode ser ajustado pelo painel: o helper em
  * inc/social.php omite a rede vazia em vez de renderizar um botao morto.
+ *
+ * 'funcao' sai do que cada um escreveu no proprio midia kit ou curriculo,
+ * com acento: e texto publicado, lido por imprensa e contratante. Quem nao
+ * tem documento no Drive fica com a forma neutra "Dança e Coreografia", que
+ * descreve o trabalho sem flexionar genero.
  */
 $membros = [
-    ['nome' => 'Alves',      'handle' => 'alvesofc'],
-    ['nome' => 'Gu Henrique', 'handle' => 'guhenrique'],
-    ['nome' => 'Jorg',       'handle' => 'jorg._'],
-    ['nome' => 'Takeshi',    'handle' => 'eutakeshi'],
-    ['nome' => 'Jux',        'handle' => 'juxcst'],
-    ['nome' => 'Ederson',    'handle' => 'edersonsouza'],
-    ['nome' => 'Jeff',        'handle' => 'jeff.tj'],
+    ['nome' => 'Alves',       'handle' => 'alvesofc',     'funcao' => 'Professor de Danças Eletrônicas e Criador de Conteúdo'],
+    ['nome' => 'Gu Henrique', 'handle' => 'guhenrique',   'funcao' => 'Co-idealizador e Coordenação Artística'],
+    ['nome' => 'Jorg',        'handle' => 'jorg._',       'funcao' => 'Dança e Coreografia'],
+    ['nome' => 'Takeshi',     'handle' => 'eutakeshi',    'funcao' => 'Dançarino, Coreógrafo e Criador de Conteúdo'],
+    ['nome' => 'Jux',         'handle' => 'juxcst',       'funcao' => 'Dança e Coreografia'],
+    ['nome' => 'Ederson',     'handle' => 'edersonsouza', 'funcao' => 'Dança e Coreografia'],
+    ['nome' => 'Jeff',        'handle' => 'jeff.tj',      'funcao' => 'Líder do Time'],
 ];
 
 /**
@@ -103,7 +99,7 @@ foreach ($membros as $membro) {
 
     // rawurlencode nao serve aqui: ponto e underline (jorg._, jeff.tj) sao
     // validos em handle e escapar quebraria o link.
-    update_field('membro_funcao', FREESTEP_FUNCAO_PADRAO, $id);
+    update_field('membro_funcao', $membro['funcao'], $id);
     update_field('membro_instagram', "https://instagram.com/{$handle}", $id);
     update_field('membro_tiktok', "https://tiktok.com/@{$handle}", $id);
 }

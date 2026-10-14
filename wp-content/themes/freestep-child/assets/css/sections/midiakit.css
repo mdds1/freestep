@@ -1,0 +1,167 @@
+/* Blocos da pagina do membro que espelham o midia kit: alcance por rede,
+   conquistas, paises, imprensa e marcas. A informacao e a do documento; o
+   que muda aqui e so como ela aparece, padronizada na identidade do site. */
+
+.fs-bloco {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* Alcance por rede */
+.fs-numeros-rede {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.fs-numero-rede {
+  position: relative;
+  text-align: center;
+  padding: 1.75rem 1rem;
+  border-radius: 10px;
+  background: var(--color-bg);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+}
+
+.fs-numero-rede::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-dourado);
+}
+
+.fs-numero-rede__valor {
+  display: block;
+  font-family: var(--font-titulo);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--color-verde);
+  background: var(--grad-verde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fs-numero-rede__rede {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Conquistas */
+.fs-lista-marcada {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+
+.fs-lista-marcada li {
+  position: relative;
+  padding: 0.9rem 0 0.9rem 2rem;
+  border-bottom: 1px solid rgba(26, 107, 53, 0.12);
+}
+
+.fs-lista-marcada li:last-child {
+  border-bottom: none;
+}
+
+/* Marcador losango dourado, no lugar do bullet padrao. */
+.fs-lista-marcada li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.45rem;
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  background: var(--grad-dourado);
+}
+
+/* Paises e marcas */
+.fs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 2.5rem;
+}
+
+.fs-chip {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--color-bg);
+  border: 1px solid rgba(26, 107, 53, 0.22);
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  color: var(--color-verde);
+  box-shadow: var(--sombra-card);
+}
+
+.fs-section--alt .fs-chip {
+  background: var(--color-bg);
+}
+
+.fs-chip--marca {
+  background: var(--grad-verde);
+  color: var(--color-branco);
+  border-color: transparent;
+}
+
+.fs-section--alt .fs-chip--marca {
+  background: var(--grad-verde);
+}
+
+/* Imprensa */
+.fs-imprensa-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.fs-imprensa-lista__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 10px;
+  background: var(--grad-lavagem);
+  border-left: 4px solid var(--color-dourado);
+}
+
+.fs-section--alt .fs-imprensa-lista__item {
+  background: var(--color-bg);
+}
+
+.fs-imprensa-lista__item strong {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-verde);
+}
+
+.fs-imprensa-lista__item span {
+  font-size: 0.88rem;
+  opacity: 0.7;
+}
+
+/* Rodape da pagina do membro */
+.fs-membro-single__rodape {
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.fs-membro-single__rodape p {
+  margin-top: 2rem;
+}

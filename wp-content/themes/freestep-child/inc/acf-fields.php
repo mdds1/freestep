@@ -46,6 +46,55 @@ add_action('acf/init', function () {
                 'name'  => 'membro_tiktok',
                 'type'  => 'url',
             ],
+            // Os blocos abaixo espelham as secoes do midia kit que o time
+            // manda para contratante: numeros por rede, paises, imprensa e
+            // marcas. Sao textarea com um item por linha porque o ACF Free
+            // nao tem campo repetidor.
+            [
+                'key'          => 'field_membro_numeros',
+                'label'        => 'Números das redes',
+                'name'         => 'membro_numeros',
+                'type'         => 'textarea',
+                'rows'         => 5,
+                'new_lines'    => '',
+                'instructions' => 'Uma rede por linha, no formato <code>Rede | Seguidores</code>. Ex: <code>TikTok | 2,3 milhões</code>',
+            ],
+            [
+                'key'          => 'field_membro_conquistas',
+                'label'        => 'Conquistas e títulos',
+                'name'         => 'membro_conquistas',
+                'type'         => 'textarea',
+                'rows'         => 6,
+                'new_lines'    => '',
+                'instructions' => 'Uma por linha.',
+            ],
+            [
+                'key'          => 'field_membro_paises',
+                'label'        => 'Países onde se apresentou',
+                'name'         => 'membro_paises',
+                'type'         => 'textarea',
+                'rows'         => 3,
+                'new_lines'    => '',
+                'instructions' => 'Separados por vírgula.',
+            ],
+            [
+                'key'          => 'field_membro_imprensa',
+                'label'        => 'Imprensa e TV',
+                'name'         => 'membro_imprensa',
+                'type'         => 'textarea',
+                'rows'         => 5,
+                'new_lines'    => '',
+                'instructions' => 'Um por linha, no formato <code>Programa | Emissora</code>.',
+            ],
+            [
+                'key'          => 'field_membro_marcas',
+                'label'        => 'Marcas e parcerias',
+                'name'         => 'membro_marcas',
+                'type'         => 'textarea',
+                'rows'         => 3,
+                'new_lines'    => '',
+                'instructions' => 'Separadas por vírgula.',
+            ],
             [
                 'key'   => 'field_membro_facebook',
                 'label' => 'Facebook',

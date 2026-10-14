@@ -20,8 +20,8 @@
     <div class="section-divider"></div>
     <div class="fs-sobre__grid">
       <div class="fs-sobre__texto">
-        <p>O Time Free Step Brasil e referencia nacional na danca Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Os integrantes ja se apresentaram em mais de 15 paises, competiram em campeonatos mundiais na Espanha e no Peru e passaram por emissoras como Globo, SBT, MTV, Record e Band.</p>
-        <p>No palco e nas redes, o time soma milhoes de seguidores e reune titulos nacionais e internacionais. Nossa missao e representar o melhor do Free Step brasileiro, inspirando novas geracoes e conectando culturas atraves da danca.</p>
+        <p>O Time Free Step Brasil é referência nacional na dança Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Os integrantes já se apresentaram em mais de 15 países, competiram em campeonatos mundiais na Espanha e no Peru e passaram por emissoras como Globo, SBT, MTV, Record e Band.</p>
+        <p>No palco e nas redes, o time soma milhões de seguidores e reúne títulos nacionais e internacionais. Nossa missão é representar o melhor do Free Step brasileiro, inspirando novas gerações e conectando culturas através da dança.</p>
       </div>
       <?php // Numeros conferidos no material do time (midia kits e curriculos,
             // maio de 2026). Nao alterar sem fonte: e pagina lida por
@@ -29,7 +29,7 @@
       <div class="fs-sobre__numeros">
         <div class="fs-numero">
           <span class="fs-numero__valor">15+</span>
-          <span class="fs-numero__label">Paises</span>
+          <span class="fs-numero__label">Países</span>
         </div>
         <div class="fs-numero">
           <span class="fs-numero__valor">72,6 MIL</span>
@@ -96,8 +96,8 @@
     // echo do_shortcode('[envira-gallery id="SEU_ID"]');
     ?>
     <div class="fs-vazio">
-      <p class="fs-vazio__titulo">Galeria em producao</p>
-      <p>Estamos selecionando as melhores fotos e videos das apresentacoes. Em breve esta secao vai estar cheia.</p>
+      <p class="fs-vazio__titulo">Galeria em produção</p>
+      <p>Estamos selecionando as melhores fotos e vídeos das apresentações. Em breve esta seção vai estar cheia.</p>
     </div>
   </div>
 </section>
@@ -144,7 +144,7 @@
       else : ?>
         <div class="fs-vazio">
           <p class="fs-vazio__titulo">Sem datas abertas no momento</p>
-          <p>A agenda de apresentacoes e divulgada aqui assim que confirmada. Para contratar o time para uma data, fale com a gente.</p>
+          <p>A agenda de apresentações é divulgada aqui assim que confirmada. Para contratar o time para uma data, fale com a gente.</p>
           <p style="margin-top:1.5rem;"><a href="#contato" class="btn-contratar">Contratar o Time</a></p>
         </div>
       <?php endif; ?>
@@ -160,8 +160,8 @@
     <?php $aparicoes = new WP_Query(['post_type' => 'fs_imprensa', 'posts_per_page' => 12]); ?>
     <?php if (!$aparicoes->have_posts()) : ?>
       <div class="fs-vazio">
-        <p class="fs-vazio__titulo">Materias a caminho</p>
-        <p>O time ja passou por televisao e veiculos de imprensa no Brasil e fora. Estamos reunindo os links.</p>
+        <p class="fs-vazio__titulo">Matérias a caminho</p>
+        <p>O time já passou por televisão e veículos de imprensa no Brasil e fora. Estamos reunindo os links.</p>
       </div>
     <?php else : ?>
     <div class="fs-imprensa__grid">
@@ -193,7 +193,7 @@
     <?php $parceiros = new WP_Query(['post_type' => 'fs_parceiro', 'posts_per_page' => -1]); ?>
     <?php if (!$parceiros->have_posts()) : ?>
       <div class="fs-vazio">
-        <p class="fs-vazio__titulo">Espaco para parceiros</p>
+        <p class="fs-vazio__titulo">Espaço para parceiros</p>
         <p>Marcas interessadas em patrocinar ou fazer permuta com o time podem falar com a gente.</p>
         <p style="margin-top:1.5rem;"><a href="#contato" class="btn-contratar">Quero ser parceiro</a></p>
       </div>

@@ -4,15 +4,19 @@
  *
  * Fonte: midia kits e curriculos enviados pelo time (maio de 2026).
  *
- * Regra aplicada ao extrair: NADA de dado pessoal. Os curriculos trazem
- * endereco residencial, telefone, email particular e data de nascimento, e
- * isso nao vai para um site publico. Entra so carreira, titulos, numeros de
- * audiencia e participacoes.
+ * TEXTO FIEL AO ORIGINAL. O time pediu que o que eles escreveram fosse
+ * usado como escreveram, entao o texto abaixo segue o documento de cada um,
+ * com a acentuacao correta. Nao reescrever com palavras proprias nem tirar
+ * acento: e texto de autoria deles, publicado em nome deles.
+ *
+ * Unica coisa retirada: dado pessoal. Os curriculos trazem endereco
+ * residencial, telefone, email particular e data de nascimento, e isso nao
+ * vai para site publico.
  *
  * Conquistas obtidas com outros grupos (Los Cocas, 7Minutoz) ficam na
- * biografia individual do membro, nunca na secao de imprensa do time:
- * atribuir ao Time Free Step o que foi de outro grupo seria falso, e
- * contratante confere.
+ * biografia individual, nunca na secao de imprensa do time: atribuir ao
+ * Time Free Step o que foi de outro grupo seria falso, e contratante
+ * confere.
  *
  * Rodar com:
  *   sudo php wp-cli.phar --allow-root --path=/var/www/freestep \
@@ -23,37 +27,55 @@
 
 $biografias = [
     'Alves' => <<<'TXT'
-Gabriel Alves, conhecido como Mr Alves, e de Sao Paulo e atua como professor de dancas eletronicas e criador de conteudo. Comecou na danca em 2009 e passou a produzir conteudo em 2016.
+Gabriel Alves, conhecido por Mr Alves, reside em São Paulo, tem 29 anos, é professor de Danças Eletrônicas e Criador de Conteúdo.
 
-Hoje e o influenciador com maior numero de seguidores do seu nicho na America Latina, somando mais de 7 milhoes de seguidores e mais de 2 bilhoes de visualizacoes. Em maio de 2026 eram 2,3 milhoes no TikTok, 1,5 milhao no YouTube, 1,2 milhao no Facebook e 486 mil no Instagram.
+Iniciou sua carreira na dança em 2009 e como criador de conteúdo em 2016.
 
-Integra a Selecao Brasileira de Free Step Dance, que ficou em segundo e terceiro lugar no Mundial de marco de 2025 na categoria grupos. E o unico brasileiro a vencer um torneio fora do pais, campeao em Lima, no Peru, em 2025, na categoria 1 contra 1. Ministra aulas e se apresenta no Brasil e no exterior.
+Hoje é o influenciador com maior número de seguidores nas redes sociais da América Latina em seu nicho, somando mais de 7 Milhões e mais de 2 Bilhões em visualizações.
+
+Ministra aulas, faz apresentações, é membro da atual Seleção Brasileira de Free Step Dance (2º e 3º lugar no Mundial, categoria grupos, março/25).
+
+Único brasileiro a vencer um torneio fora do país, sendo campeão em Lima, Peru, em 2025, na categoria 1vs1.
 TXT,
 
     'Gu Henrique' => <<<'TXT'
-Gustavo Henrique, o Gu Henrique, e de Ferraz de Vasconcelos, em Sao Paulo, e co-idealizador do Time Free Step Brasil. Atua na coordenacao e no desenvolvimento artistico do time, criando coreografias originais e projetos que fortalecem a cena do Free Step nacional e internacional.
+Co-idealizador da criação do grupo e na atuação ativa da coordenação e desenvolvimento artístico do Time Free Step Brasil, contribuindo para a criação de coreografias originais, performances de alto impacto e projetos que fortalecem a cena do Freestep nacional e internacional.
 
-Comecou na danca em 2010 e competiu em campeonatos por todo o Brasil, passando por Maranhao, Pernambuco, Paraiba, Minas Gerais, Rio de Janeiro, Sao Paulo, Ceara e Tocantins. Ao longo da carreira atuou como competidor, jurado, atracao convidada e representante do cenario brasileiro em eventos nacionais e internacionais, incluindo competicoes e projetos na Espanha.
+Produção de conteúdos para internet, workshops e participação em competições dentro e fora do Brasil, sempre representando o estilo com técnica, criatividade e autenticidade.
 
-Entre os titulos estao o bicampeonato nacional com o grupo Los Cocas, em 2016 e 2017, e o terceiro lugar no Campeonato Mundial de Dancas Eletronicas, categoria Shuffle Showcase 3 contra 3, em Barcelona. Na televisao, participou do Dez ou Mil e do Circo do Tiru, no SBT, e do reality Let's Dance, na MTV, todos com o Los Cocas.
+Iniciou na dança em 2010, participando de diversos campeonatos de Freestep por todo o Brasil, incluindo os estados de Maranhão, Pernambuco, Paraíba, Minas Gerais, Rio de Janeiro, São Paulo, Ceará e Tocantins (Palmas). Ao longo da carreira, atuou como competidor, jurado, atração convidada e representante do cenário brasileiro de Freestep em eventos nacionais e internacionais. Também participou de competições e projetos na Espanha, ampliando sua presença no cenário mundial da dança eletrônica.
+
+Títulos de destaque: Bicampeão Nacional com o grupo Los Cocas (2016 e 2017), Campeão Individual no Meet Up Suzano, Campeão Individual no Meet Up Fábricas de Cultura Itaim, Campeão de Dupla no Torneio Oldschool em Santo André e 3º Lugar no Campeonato Mundial de Danças Eletrônicas, Shuffle Showcase, categoria 3 vs 3, em Barcelona, Espanha.
+
+Participações em TV com o grupo Los Cocas: Dez ou Mil (SBT), Let's Dance (MTV) e Circo do Tiru (SBT).
 TXT,
 
     'Jeff' => <<<'TXT'
-Jeff TJ e do Tocantins e lidera o Time Free Step Brasil. Sao 17 anos de carreira na danca e pos-graduacao em Dancas Urbanas, atuando como dancarino, formador e influenciador digital.
+Do Tocantins pro Mundo.
 
-Ja se apresentou em mais de 15 paises, entre eles Austria, Eslovenia, Dinamarca, Portugal, Espanha, Peru, Italia, Alemanha, Eslovaquia, Suica, Hungria, Holanda, Croacia, Franca e Republica Tcheca, participando de competicoes, atuando como jurado e ministrando workshops.
+O dançarino brasileiro que transcendeu as barreiras da Arte e da cultura para se tornar um ícone de resiliência e inspiração para jovens pelo Mundo. Com 17 anos de carreira na Dança e pós-graduação em Danças Urbanas, atua como dançarino, formador e influenciador digital. Líder do Time Free Step Brasil, seleção brasileira de Danças eletrônicas, destaca-se por levar a dança brasileira para palcos, projetos e experiências internacionais, além de produzir conteúdo digital voltado para o FLASHBACK que alcança milhões de visualizações inspirando jovens, adultos e idosos na prática da dança.
 
-Em 2016 foi convidado a integrar o grupo de condutores da Tocha Olimpica dos Jogos do Rio, conduzindo a tocha na passagem por Palmas. Na televisao, participou do Encontro com Fatima Bernardes, na Globo, alem de mais de vinte programas regionais no Tocantins, em emissoras como Globo, SBT, Record, Band e TVE.
+O dançarino, enquanto pessoa com deficiência (PCD), torna-se uma poderosa fonte de inspiração para milhares de jovens que enfrentam diariamente o preconceito e a exclusão social. Sua trajetória demonstra, com sensibilidade e força, que as limitações impostas pela sociedade podem ser superadas por meio da arte, da dedicação e da persistência, incentivando outros a acreditarem em seu potencial e a ocuparem seus espaços com orgulho e determinação.
 
-Pessoa com deficiencia, usa a propria trajetoria para mostrar que as limitacoes impostas pela sociedade podem ser superadas pela arte, pela dedicacao e pela persistencia.
+Presente em mais de 15 países: Áustria, Eslovênia, Dinamarca, Portugal, Espanha, Peru, Itália, Alemanha, Eslováquia, Suíça, Hungria, Holanda, Croácia, França, República Tcheca e Brasil. Ao longo de sua carreira, participou de competições, realizou performances como jurado, conquistou títulos, ministrou workshops e aulas, além de marcar presença em diversos festivais de dança.
+
+Olimpíadas Rio 2016, Condutor: em reconhecimento ao seu relevante trabalho em prol da cultura e da dança brasileira, bem como por sua atuação inspiradora junto a jovens PCD, foi convidado a integrar o seleto grupo de condutores da Tocha Olímpica nos Jogos Olímpicos Rio 2016. Durante o percurso que atravessou todas as capitais do país, teve a honra de conduzir a tocha em sua passagem por Palmas, representando com orgulho a cidade e reafirmando seu compromisso com a inclusão, a arte e a transformação social.
+
+Imprensa: já participou de diversos programas de TV, tanto locais quanto nacionais, entre eles o Encontro com Fátima Bernardes (Globo Nacional), onde apresentou sua inspiradora trajetória de superação por meio da dança.
 TXT,
 
     'Takeshi' => <<<'TXT'
-Guilherme Takeshi Araki, o Takeshi, e de Mogi das Cruzes, em Sao Paulo, e soma 15 anos de atuacao na cena das dancas eletronicas e urbanas, como dancarino, coreografo e criador de conteudo.
+Dançarino, coreógrafo e criador de conteúdo com 15 anos de atuação na cena das danças eletrônicas e urbanas. Profissional com carreira sólida em palcos e presença digital, unindo performance, criatividade e produção de conteúdo autoral.
 
-Foi campeao em mais de 20 competicoes nacionais e levou o titulo de Melhor Dancarino de Free Step do Brasil em 2017. Em 2025 ficou em segundo lugar na categoria trio do Campeonato Mundial TSL, na Espanha, e em terceiro no solo de Shuffle Dance do Elektronia, no Peru, alem de ministrar masterclasses internacionais nos dois paises.
+Reconhecimento: campeão em mais de 20 competições nacionais, incluindo o título de Melhor Dançarino de Free Step do Brasil (2017).
 
-Foi coreografo e dancarino do grupo 7Minutoz no Rock In Rio 2024 e dancou na abertura da Copa America de 2019, pela CONMEBOL. Participou de videoclipes de artistas como Justin Timberlake, Tate McRae, Gloria Groove e Haikaiss, e de campanhas para marcas como Amazon Music, Converse, Riachuelo e Centauro. E fundador da comunidade Passos Livres.
+Experiência internacional: membro do Time Free Step Brasil, ministrou Masterclasses Internacionais de Free Step na Espanha (The Showcase League 2025) e no Peru (Elektronia 2025). 2º lugar no Trio do Campeonato Mundial TSL (Espanha, 2025) e 3º lugar no Solo de Shuffle Dance Elektronia (Peru, 2025).
+
+Atuação profissional: possui vasta experiência como instrutor, jurado, modelo, performer em shows, espetáculos, videoclipes, programas de TV e em criação de campanhas digitais.
+
+Parcerias de destaque: trabalhou com grandes marcas e artistas como Rock In Rio, The Town, Amazon Music, Riachuelo, Converse, CONMEBOL, TikTok, AMBEV, TV Globo, SBT, Alok, Glória Groove e Haikaiss, entre outros. Foi coreógrafo e dançarino do grupo 7Minutoz no Rock In Rio 2024 e dançarino na abertura da Copa América (CONMEBOL, 2019).
+
+Fundador da comunidade Passos Livres (2025) e do projeto TKSH Class, aulas online de dança (2020).
 TXT,
 ];
 

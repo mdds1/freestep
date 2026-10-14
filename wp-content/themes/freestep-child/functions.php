@@ -2,6 +2,7 @@
 
 require_once get_stylesheet_directory() . '/inc/acf-fields.php';
 require_once get_stylesheet_directory() . '/inc/social.php';
+require_once get_stylesheet_directory() . '/inc/listas.php';
 
 /**
  * Versao do asset = data de modificacao do arquivo. Enquanto o site esta em
@@ -36,7 +37,7 @@ add_action('wp_enqueue_scripts', function () {
 
     // Cada secao entra como handle proprio, dependente do main. Com @import
     // dentro do main.css elas vinham sem versao e o cache servia CSS velho.
-    $secoes = ['header', 'footer', 'hero', 'sobre', 'time', 'social', 'agenda', 'imprensa', 'parceiros', 'contato'];
+    $secoes = ['header', 'footer', 'hero', 'sobre', 'time', 'social', 'midiakit', 'agenda', 'imprensa', 'parceiros', 'contato'];
     foreach ($secoes as $secao) {
         $relativo = "/assets/css/sections/{$secao}.css";
         wp_enqueue_style(
