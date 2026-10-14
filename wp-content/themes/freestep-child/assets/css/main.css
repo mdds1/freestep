@@ -1,0 +1,41 @@
+/* As secoes (sections/*.css) sao enfileiradas uma a uma em functions.php,
+   depois deste arquivo. Nao reintroduzir @import aqui: perde o versionamento. */
+
+* {
+  box-sizing: border-box;
+}
+
+/* `html body` e necessario: o WordPress injeta
+   body{padding-top:0px;...} em global-styles-inline-css DEPOIS
+   deste arquivo, e com especificidade igual o ultimo vence. */
+html body {
+  padding-top: 80px;
+  background-color: var(--color-bg);
+  color: var(--color-texto);
+}
+
+/* GeneratePress limita largura de imagem no conteudo */
+.fs-section img,
+.fs-hero img {
+  height: auto;
+}
+
+.fs-section {
+  padding: 5rem 1.5rem;
+}
+
+.fs-section--alt {
+  background: var(--color-bg-alt);
+}
+
+.fs-section__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-verde);
+  margin-bottom: 0.25rem;
+}
+
+.fs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

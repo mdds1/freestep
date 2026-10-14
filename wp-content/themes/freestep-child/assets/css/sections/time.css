@@ -1,0 +1,106 @@
+.fs-time__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.fs-membro-card {
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-bg);
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.fs-membro-card:hover {
+  border-color: var(--color-dourado);
+  transform: translateY(-4px);
+}
+
+.fs-membro-card__foto img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.fs-membro-card__info {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.fs-membro-card__nome {
+  font-family: var(--font-titulo);
+  font-size: 1.1rem;
+  color: var(--color-verde);
+  margin: 0 0 0.25rem;
+}
+
+.fs-membro-card__funcao {
+  font-size: 0.85rem;
+  color: var(--color-texto);
+  margin: 0;
+  opacity: 0.75;
+}
+
+.fs-membro-single__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.fs-membro-single__foto img {
+  width: 100%;
+  display: block;
+}
+
+.fs-membro-single__funcao {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  color: var(--color-dourado);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.fs-membro-single__nome {
+  font-size: 3rem;
+  color: var(--color-verde);
+  margin: 0.25rem 0 0;
+}
+
+.fs-membro-single__bio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.fs-membro-single__social a {
+  display: inline-block;
+  margin-right: 1rem;
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-verde);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-dourado);
+  padding-bottom: 2px;
+}
+
+.fs-membro-single__voltar {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .fs-membro-single__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,89 @@
+.fs-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-bg);
+  border-bottom: 3px solid var(--color-dourado);
+  padding: 0.75rem 0;
+}
+
+.fs-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fs-header__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* GeneratePress forca img{height:auto}, o que anula o height do HTML */
+.fs-header__logo img {
+  height: 56px;
+  width: auto;
+  max-width: none;
+  display: block;
+}
+
+.fs-header__nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.fs-header__nav a {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.fs-header__nav a:hover {
+  color: var(--color-verde);
+}
+
+.fs-header__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .fs-header__nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--color-bg-alt);
+  }
+
+  .fs-header__nav.open {
+    display: flex;
+  }
+
+  .fs-header__nav a {
+    margin: 0.5rem 0;
+  }
+
+  .fs-header__hamburger {
+    display: block;
+  }
+}

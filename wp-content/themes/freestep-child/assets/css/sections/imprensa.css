@@ -1,0 +1,34 @@
+.fs-imprensa__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.fs-imprensa__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+
+.fs-imprensa__item:hover { border-color: var(--color-dourado); }
+
+.fs-imprensa__item img { max-height: 60px; object-fit: contain; }
+
+.fs-imprensa__titulo {
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.fs-imprensa__nome {
+  font-family: var(--font-titulo);
+  font-size: 1.2rem;
+  color: var(--color-verde);
+}

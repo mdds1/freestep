@@ -1,0 +1,39 @@
+.fs-footer {
+  background: var(--color-verde);
+  color: var(--color-branco);
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.fs-footer__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fs-footer__social {
+  margin: 1.5rem 0 1rem;
+}
+
+.fs-footer__social a {
+  color: var(--color-dourado);
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+.fs-footer__social a:hover {
+  color: var(--color-branco);
+}
+
+.fs-footer__email {
+  color: var(--color-branco);
+  margin: 0.5rem 0;
+}
+
+.fs-footer__copy {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 1.5rem;
+}

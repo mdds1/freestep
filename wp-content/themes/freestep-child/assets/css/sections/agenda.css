@@ -1,0 +1,37 @@
+.fs-agenda__item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fs-agenda__data {
+  font-family: var(--font-titulo);
+  font-size: 1.25rem;
+  color: var(--color-verde);
+  min-width: 110px;
+  font-weight: 700;
+}
+
+.fs-agenda__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fs-agenda__info strong {
+  font-family: var(--font-titulo);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.fs-agenda__info span {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .fs-agenda__item { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}

@@ -1,0 +1,56 @@
+/*
+Theme Name: Free Step Child
+Template: generatepress
+Version: 1.0.0
+*/
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f5;
+  --color-verde: #1a6b35;
+  --color-dourado: #f5c400;
+  --color-texto: #1a1a1a;
+  --color-branco: #ffffff;
+  --font-titulo: 'Barlow Condensed', sans-serif;
+  --font-corpo: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-corpo);
+  color: var(--color-texto);
+  background: var(--color-bg);
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.btn-contratar {
+  background: var(--color-verde);
+  color: var(--color-branco);
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.btn-contratar:hover {
+  background: var(--color-dourado);
+  color: var(--color-texto);
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-dourado);
+  margin: 0.5rem auto 2rem;
+}

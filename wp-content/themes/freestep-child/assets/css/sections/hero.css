@@ -1,0 +1,43 @@
+/* Sem background-image enquanto o time nao enviar a foto de palco.
+   url('') vazio invalida o bloco inteiro: nao reintroduzir sem arquivo. */
+.fs-hero {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.fs-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.fs-hero__logo {
+  width: 220px;
+  height: auto;
+  max-width: 60vw;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+}
+
+.fs-hero__tagline {
+  font-family: var(--font-titulo);
+  font-size: 1.5rem;
+  color: var(--color-branco);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
