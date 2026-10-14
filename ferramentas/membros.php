@@ -15,54 +15,73 @@
  *     eval-file ferramentas/membros.php
  */
 
-/** Handles iguais no Instagram e no TikTok, na ordem do grid. */
-$handles = [
-    'alvesofc',
-    'edersonsouza',
-    'juxcst',
-    'takeshi',
-    'guhenrique',
-    'jorg._',
+/**
+ * O time, na ordem do grid.
+ *
+ * 'handle' e o mesmo no Instagram e no TikTok para todos. Se algum dia um
+ * membro divergir, o campo pode ser ajustado pelo painel: o helper em
+ * inc/social.php omite a rede vazia em vez de renderizar um botao morto.
+ */
+$membros = [
+    ['nome' => 'Alves',      'handle' => 'alvesofc'],
+    ['nome' => 'Gu Henrique', 'handle' => 'guhenrique'],
+    ['nome' => 'Jorg',       'handle' => 'jorg._'],
+    ['nome' => 'Takeshi',    'handle' => 'eutakeshi'],
+    ['nome' => 'Jux',        'handle' => 'juxcst'],
+    ['nome' => 'Ederson',    'handle' => 'edersonsouza'],
+    ['nome' => 'Jeff',        'handle' => 'jeff.tj'],
 ];
 
-// Limpa os exemplos de antes dos handles reais.
-for ($i = 1; $i <= 6; $i++) {
-    $exemplo = get_page_by_title("Membro Exemplo {$i}", OBJECT, 'fs_membro');
-    if ($exemplo) {
-        wp_delete_post($exemplo->ID, true);
-        echo "removido exemplo: Membro Exemplo {$i}", PHP_EOL;
+/**
+ * Titulos de rodadas anteriores deste script, quando os membros ainda
+ * entravam com o handle no lugar do nome. Some quando ninguem mais tiver
+ * um site criado antes desta versao.
+ */
+$legados = [
+    'Membro Exemplo 1', 'Membro Exemplo 2', 'Membro Exemplo 3',
+    'Membro Exemplo 4', 'Membro Exemplo 5', 'Membro Exemplo 6',
+    'alvesofc', 'edersonsouza', 'juxcst', 'takeshi', 'guhenrique', 'jorg._',
+];
+
+foreach ($legados as $titulo) {
+    $antigo = get_page_by_title($titulo, OBJECT, 'fs_membro');
+    if ($antigo) {
+        wp_delete_post($antigo->ID, true);
+        echo "removido legado: {$titulo}", PHP_EOL;
     }
 }
 
 $ordem = 0;
 
-foreach ($handles as $handle) {
+foreach ($membros as $membro) {
     $ordem++;
 
-    $existente = get_page_by_title($handle, OBJECT, 'fs_membro');
+    $existente = get_page_by_title($membro['nome'], OBJECT, 'fs_membro');
 
     if ($existente) {
         $id = $existente->ID;
         wp_update_post(['ID' => $id, 'menu_order' => $ordem]);
-        echo "atualizado: {$handle} (ID {$id})", PHP_EOL;
+        echo "atualizado: {$membro['nome']} (ID {$id})", PHP_EOL;
     } else {
         $id = wp_insert_post([
             'post_type'   => 'fs_membro',
-            'post_title'  => $handle,
+            'post_title'  => $membro['nome'],
             'post_status' => 'publish',
             'menu_order'  => $ordem,
         ]);
 
         if (is_wp_error($id)) {
-            echo "ERRO em {$handle}: ", $id->get_error_message(), PHP_EOL;
+            echo "ERRO em {$membro['nome']}: ", $id->get_error_message(), PHP_EOL;
             continue;
         }
 
-        echo "criado: {$handle} (ID {$id})", PHP_EOL;
+        echo "criado: {$membro['nome']} (ID {$id})", PHP_EOL;
     }
 
-    // rawurlencode nao serve aqui: o ponto e o underline de jorg._ sao
-    // validos em handle e nao devem ser escapados.
+    $handle = $membro['handle'];
+
+    // rawurlencode nao serve aqui: ponto e underline (jorg._, jeff.tj) sao
+    // validos em handle e escapar quebraria o link.
     update_field('membro_instagram', "https://instagram.com/{$handle}", $id);
     update_field('membro_tiktok', "https://tiktok.com/@{$handle}", $id);
 }
