@@ -65,7 +65,7 @@ $portfolio = [
         'paises' => 'Áustria, Eslovênia, Dinamarca, Portugal, Espanha, Peru, Itália, Alemanha, Eslováquia, Suíça, Hungria, Holanda, Croácia, França, República Tcheca, Brasil',
         'conquistas' => [
             'Condutor da Tocha Olímpica nos Jogos Olímpicos Rio 2016, na passagem por Palmas',
-            'Líder do Time Free Step Brasil, seleção brasileira de Danças Eletrônicas',
+            'Líder do Free Step Brazil Team, seleção brasileira de Danças Eletrônicas',
             '17 anos de carreira na dança e pós-graduação em Danças Urbanas',
             'Apresentações, competições, júri e workshops em mais de 15 países',
         ],

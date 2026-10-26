@@ -7,7 +7,7 @@
   <div class="fs-hero__overlay"></div>
   <div class="fs-hero__content">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-verde-dourado.png"
-         alt="Time Free Step Brasil" class="fs-hero__logo">
+         alt="Free Step Brazil Team" class="fs-hero__logo">
     <p class="fs-hero__tagline">Levando a cultura do Free Step brasileiro para o mundo</p>
     <a href="#contato" class="btn-contratar">Contratar o Time</a>
   </div>
@@ -20,7 +20,7 @@
     <div class="section-divider"></div>
     <div class="fs-sobre__grid">
       <div class="fs-sobre__texto">
-        <p>O Time Free Step Brasil é referência nacional na dança Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Os integrantes já se apresentaram em mais de 15 países, competiram em campeonatos mundiais na Espanha e no Peru e passaram por emissoras como Globo, SBT, MTV, Record e Band.</p>
+        <p>O Free Step Brazil Team é referência nacional na dança Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Os integrantes já se apresentaram em mais de 15 países, competiram em campeonatos mundiais na Espanha e no Peru e passaram por emissoras como Globo, SBT, MTV, Record e Band.</p>
         <p>No palco e nas redes, o time soma milhões de seguidores e reúne títulos nacionais e internacionais. Nossa missão é representar o melhor do Free Step brasileiro, inspirando novas gerações e conectando culturas através da dança.</p>
       </div>
       <?php // Numeros conferidos no material do time (midia kits e curriculos,

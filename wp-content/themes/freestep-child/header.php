@@ -12,7 +12,7 @@
   <div class="fs-header__inner">
     <a href="<?php echo home_url('/'); ?>" class="fs-header__logo">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-verde-dourado.png"
-           alt="Time Free Step Brasil" height="56">
+           alt="Free Step Brazil Team" height="56">
     </a>
     <nav class="fs-header__nav">
       <a href="#sobre">Sobre</a>

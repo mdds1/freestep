@@ -1,4 +1,4 @@
-# Site Time Free Step Brasil -- Design
+# Site Free Step Brazil Team -- Design
 
 **Data:** 2026-10-14  
 **Responsavel:** Matheus  
@@ -8,7 +8,7 @@
 
 ## Objetivo
 
-Site institucional do Time Free Step Brasil com dois focos:
+Site institucional do Free Step Brazil Team com dois focos:
 
 1. **Vitrine/portfolio** -- apresentar o time para contratantes, imprensa e fas com impacto visual forte
 2. **Contato profissional** -- capturar propostas de shows, publicidade e jobs

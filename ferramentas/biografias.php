@@ -15,7 +15,7 @@
  *
  * Conquistas obtidas com outros grupos (Los Cocas, 7Minutoz) ficam na
  * biografia individual, nunca na secao de imprensa do time: atribuir ao
- * Time Free Step o que foi de outro grupo seria falso, e contratante
+ * Free Step Brazil Team o que foi de outro grupo seria falso, e contratante
  * confere.
  *
  * Rodar com:
@@ -39,7 +39,7 @@ Ministra aulas, faz apresentações, é membro da atual Seleção Brasileira de 
 TXT,
 
     'Gu Henrique' => <<<'TXT'
-Co-idealizador da criação do grupo e na atuação ativa da coordenação e desenvolvimento artístico do Time Free Step Brasil, contribuindo para a criação de coreografias originais, performances de alto impacto e projetos que fortalecem a cena do Freestep nacional e internacional.
+Co-idealizador da criação do grupo e na atuação ativa da coordenação e desenvolvimento artístico do Free Step Brazil Team, contribuindo para a criação de coreografias originais, performances de alto impacto e projetos que fortalecem a cena do Freestep nacional e internacional.
 
 Produção de conteúdos para internet, workshops e participação em competições dentro e fora do Brasil, sempre representando o estilo com técnica, criatividade e autenticidade.
 
@@ -53,7 +53,7 @@ TXT,
     'Jeff' => <<<'TXT'
 Do Tocantins pro Mundo.
 
-O dançarino brasileiro que transcendeu as barreiras da Arte e da cultura para se tornar um ícone de resiliência e inspiração para jovens pelo Mundo. Com 17 anos de carreira na Dança e pós-graduação em Danças Urbanas, atua como dançarino, formador e influenciador digital. Líder do Time Free Step Brasil, seleção brasileira de Danças eletrônicas, destaca-se por levar a dança brasileira para palcos, projetos e experiências internacionais, além de produzir conteúdo digital voltado para o FLASHBACK que alcança milhões de visualizações inspirando jovens, adultos e idosos na prática da dança.
+O dançarino brasileiro que transcendeu as barreiras da Arte e da cultura para se tornar um ícone de resiliência e inspiração para jovens pelo Mundo. Com 17 anos de carreira na Dança e pós-graduação em Danças Urbanas, atua como dançarino, formador e influenciador digital. Líder do Free Step Brazil Team, seleção brasileira de Danças eletrônicas, destaca-se por levar a dança brasileira para palcos, projetos e experiências internacionais, além de produzir conteúdo digital voltado para o FLASHBACK que alcança milhões de visualizações inspirando jovens, adultos e idosos na prática da dança.
 
 O dançarino, enquanto pessoa com deficiência (PCD), torna-se uma poderosa fonte de inspiração para milhares de jovens que enfrentam diariamente o preconceito e a exclusão social. Sua trajetória demonstra, com sensibilidade e força, que as limitações impostas pela sociedade podem ser superadas por meio da arte, da dedicação e da persistência, incentivando outros a acreditarem em seu potencial e a ocuparem seus espaços com orgulho e determinação.
 
@@ -69,7 +69,7 @@ Dançarino, coreógrafo e criador de conteúdo com 15 anos de atuação na cena 
 
 Reconhecimento: campeão em mais de 20 competições nacionais, incluindo o título de Melhor Dançarino de Free Step do Brasil (2017).
 
-Experiência internacional: membro do Time Free Step Brasil, ministrou Masterclasses Internacionais de Free Step na Espanha (The Showcase League 2025) e no Peru (Elektronia 2025). 2º lugar no Trio do Campeonato Mundial TSL (Espanha, 2025) e 3º lugar no Solo de Shuffle Dance Elektronia (Peru, 2025).
+Experiência internacional: membro do Free Step Brazil Team, ministrou Masterclasses Internacionais de Free Step na Espanha (The Showcase League 2025) e no Peru (Elektronia 2025). 2º lugar no Trio do Campeonato Mundial TSL (Espanha, 2025) e 3º lugar no Solo de Shuffle Dance Elektronia (Peru, 2025).
 
 Atuação profissional: possui vasta experiência como instrutor, jurado, modelo, performer em shows, espetáculos, videoclipes, programas de TV e em criação de campanhas digitais.
 

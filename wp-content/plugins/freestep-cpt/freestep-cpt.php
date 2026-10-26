@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Free Step CPT
- * Description: Tipos de conteudo customizados do Time Free Step Brasil
+ * Description: Tipos de conteudo customizados do Free Step Brazil Team
  * Version: 1.0.0
  */
 

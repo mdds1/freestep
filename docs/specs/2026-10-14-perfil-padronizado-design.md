@@ -1,7 +1,7 @@
 # Perfil padronizado do membro
 
 Data: 14/10/2026
-Projeto: site do Time Free Step Brasil
+Projeto: site do Free Step Brazil Team
 
 ## Problema
 
@@ -54,7 +54,7 @@ vai para o site.
 
 **Conquista obtida com outro grupo fica no perfil individual.** Los Cocas,
 7Minutoz e participacoes anteriores aparecem na pagina do membro, nunca na
-secao de imprensa do time. Atribuir ao Time Free Step o que foi de outro
+secao de imprensa do time. Atribuir ao Free Step Brazil Team o que foi de outro
 grupo seria falso, e contratante confere.
 
 **Alcance nas redes entra no nucleo.** E o dado que mais pesa para quem

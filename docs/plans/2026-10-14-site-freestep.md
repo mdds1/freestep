@@ -1,8 +1,8 @@
-# Site Time Free Step Brasil -- Implementation Plan
+# Site Free Step Brazil Team -- Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Construir site institucional WordPress do Time Free Step Brasil com vitrine visual, perfis de membros e formulario de contato para jobs.
+**Goal:** Construir site institucional WordPress do Free Step Brazil Team com vitrine visual, perfis de membros e formulario de contato para jobs.
 
 **Architecture:** WordPress instalado na VM 301 na porta 8081. Tema filho customizado sobre o tema base GeneratePress (leve e sem bloatware). Tipos de conteudo customizados (CPT) para Membros, Shows, Imprensa e Parceiros registrados via plugin simples. Painel admin nativo do WordPress, sem plugin de page builder -- HTML/CSS direto no tema filho para controle total do layout.
 
@@ -145,7 +145,7 @@ Acessar `http://IP_VM301:8081` e preencher:
 - Prefixo: `fs_`
 
 Completar instalacao com:
-- Titulo do site: `Time Free Step Brasil`
+- Titulo do site: `Free Step Brazil Team`
 - Usuario admin: definido por voce
 - Email: `timefreestepbrasil@gmail.com`
 
@@ -284,7 +284,7 @@ Criar `/var/www/freestep/wp-content/plugins/freestep-cpt/freestep-cpt.php`:
 <?php
 /**
  * Plugin Name: Free Step CPT
- * Description: Tipos de conteudo customizados do Time Free Step Brasil
+ * Description: Tipos de conteudo customizados do Free Step Brazil Team
  * Version: 1.0.0
  */
 
@@ -431,7 +431,7 @@ sudo chown www-data:www-data /var/www/freestep/wp-content/themes/freestep-child/
   <div class="fs-header__inner">
     <a href="<?php echo home_url('/'); ?>" class="fs-header__logo">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-verde-dourado.png"
-           alt="Time Free Step Brasil" height="56">
+           alt="Free Step Brazil Team" height="56">
     </a>
     <nav class="fs-header__nav">
       <a href="#sobre">Sobre</a>
@@ -453,12 +453,12 @@ sudo chown www-data:www-data /var/www/freestep/wp-content/themes/freestep-child/
 <footer class="fs-footer">
   <div class="fs-footer__inner">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-branco.png"
-         alt="Time Free Step Brasil" height="64">
+         alt="Free Step Brazil Team" height="64">
     <div class="fs-footer__social">
       <a href="https://www.instagram.com/timefreestepbrazil/" target="_blank" rel="noopener">Instagram</a>
     </div>
     <p class="fs-footer__email">timefreestepbrasil@gmail.com</p>
-    <p class="fs-footer__copy">&copy; <?php echo date('Y'); ?> Time Free Step Brasil. Todos os direitos reservados.</p>
+    <p class="fs-footer__copy">&copy; <?php echo date('Y'); ?> Free Step Brazil Team. Todos os direitos reservados.</p>
   </div>
 </footer>
 
@@ -677,7 +677,7 @@ Acessar `http://IP_VM301:8081`. Menu deve aparecer fixo no topo com logo e links
   <div class="fs-hero__overlay"></div>
   <div class="fs-hero__content">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-verde-dourado.png"
-         alt="Time Free Step Brasil" class="fs-hero__logo">
+         alt="Free Step Brazil Team" class="fs-hero__logo">
     <p class="fs-hero__tagline">Levando a cultura do Free Step brasileiro para o mundo</p>
     <a href="#contato" class="btn-contratar">Contratar o Time</a>
   </div>
@@ -782,7 +782,7 @@ Inserir apos o fechamento da secao `#capa`:
     <div class="section-divider"></div>
     <div class="fs-sobre__grid">
       <div class="fs-sobre__texto">
-        <p>O Time Free Step Brasil e referencia nacional na danca Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Com apresentacoes em paises como Espanha e Peru, e aparicoes em programas de televisao como o SBT, o time une tecnica, criatividade e orgulho nacional.</p>
+        <p>O Free Step Brazil Team e referencia nacional na danca Free Step, levando a cultura brasileira para palcos no Brasil e no mundo. Com apresentacoes em paises como Espanha e Peru, e aparicoes em programas de televisao como o SBT, o time une tecnica, criatividade e orgulho nacional.</p>
         <p>Nossa missao e representar o melhor do Free Step brasileiro, inspirando novas geracoes e conectando culturas atraves da danca.</p>
       </div>
       <div class="fs-sobre__numeros">

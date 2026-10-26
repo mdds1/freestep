@@ -1111,7 +1111,7 @@ analista de negocios.
 
 | Topico | Origem |
 |---|---|
-| release | Bloco "Time Free Step Brazil — Membro Oficial" |
+| release | Bloco "Free Step Brazil Team — Membro Oficial" |
 | base | "Ferraz de Vasconcelos - São Paulo" |
 | carreira | "Iniciou na dança em 2010" |
 | papel | `Co-idealizador e Coordenação Artística` |
